@@ -2,8 +2,6 @@
     "name": "divisum/module-apilgl",
     "description": "",
     "type": "magento2-module",
-    "license": "proprietary",
-    "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "files": [
