@@ -3,17 +3,7 @@
     "description": "",
     "type": "magento2-module",
     "license": "proprietary",
-    "authors": [
-        {
-            "email": "info@mage2gen.com",
-            "name": "Mage2Gen"
-        },
-        {
-            "email": "bgaiteiro@gmail.com",
-            "name": "Bruno Gaiteiro"
-        }
-    ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "files": [
