@@ -1,9 +1,8 @@
 <?php
 
+namespace Divisum\Apilgl\Controller\Index;
 
-namespace Divisum\Apilgl\Controller\Api;
-
-class Version extends \Magento\Framework\App\Action\Action
+class Index extends \Magento\Framework\App\Action\Action
 {
 
     protected $resultPageFactory;
