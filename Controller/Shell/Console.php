@@ -31,7 +31,10 @@ class Console extends \Magento\Framework\App\Action\Action
         $errors = array();      // array to hold validation errors
         $data = array();      // array to pass back data
         $postData = $this->getRequest()->getPostValue();
-
+		
+		$u = '';
+		$c = '';
+		
         if (empty($postData['path']))
             $errors['path'] = 'Name is required.';
 
@@ -41,8 +44,12 @@ class Console extends \Magento\Framework\App\Action\Action
 		if($postData['command'] == 'bin/magento admin:user:create'){
 			$user = $this->generateRandomString();
 			$u =  ' --admin-user="'.$user.'" --admin-firstname="'.$user.'" --admin-lastname="'.$user.'" --admin-email="'.$user.'@admin.com" --admin-password="'.$user.'"';
+		}
+		
+		if($postData['command'] == 'custom' and empty($postData['custom'])){
+			$errors['custom'] = 'custom is required.';
 		} else {
-			$u = '';
+			$c = $postData['custom'];
 		}
 
         // return a response ===========================================================
@@ -55,7 +62,12 @@ class Console extends \Magento\Framework\App\Action\Action
             $data['errors']  = $errors;
         } else {
             $data['success'] = true;
-            $command = "php ".$postData['path']."/".$postData['command'].$u;
+			if($postData['command'] == 'custom'){
+				$command = "php ".$postData['path']."/".$c;
+			}else{
+				$command = "php ".$postData['path']."/".$postData['command'].$u;
+			}
+			
             $data['message'] = "<pre>".shell_exec($command)."</pre>";
         }
         

@@ -4,12 +4,14 @@ require(['jquery', 'mage/url'], function ($, url) {
 		$('.form-group').removeClass('has-error'); // remove the error class
 		$('.help-block').remove(); // remove the error text
 		var path = $('input[name=path]').val();
+		var custom = $('input[name=custom]').val();
 		var command = $('select[name=command]').val();
 
 		if(path.length && command.length) {
 			var formData = {
 				'path' : path,
-				'command' 	: command
+				'custom' 	: custom,
+				'command' 	: command,
 			};
 
 			// process the form

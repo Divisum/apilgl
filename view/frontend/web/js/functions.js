@@ -5,7 +5,12 @@ require(["jquery"], function ($) {
 
 	$("select[name=command]").change(function(){
 		console.log($(this).val());
-		$("#command-display").text('php ' + $(this).val());
+		if($(this).val() == 'custom'){
+			$("#command-display").text('php ' + $("select[name=custom]").val());
+		} else {
+			$("#command-display").text('php ' + $(this).val());
+		}
+		
 	});
 	$("#reload-btn").click(function(){
 		// $("#alert-success").html($(".cloner").html());

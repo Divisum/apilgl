@@ -1,6 +1,4 @@
-<div class="col-sm-6 col-sm-offset-3">
-
-	<h1>Divisum Legal</h1>
+<div class="col-sm-6 col-sm-offset-3" style="margin-top: 40px;">
 
 	<!-- OUR FORM -->
 	<form class="form" id="form" data-mage-init='{"validation": {}}' action="#" method="POST">
@@ -17,6 +15,12 @@
 				<span class="path"><?php echo BP; ?></span>
 				<span><a id="use-path" val="<?php echo BP; ?>" href="#"><?php echo __('Use') ?></a></span>
 			</div>
+		</div>
+		
+		<div id="custom-group" class="form-group">
+			<label for="custom"><?php echo __('Custom Command'); ?></label>
+			<input type="text" class="form-control input-text" name="custom"/>
+			<!-- errors will go here -->
 		</div>
 
 		<div id="command-group" class="form-group">
@@ -53,11 +57,17 @@
 				</optgroup>
 				<optgroup label="Admin User">
 					<option value="bin/magento admin:user:create">Create Admin User</option>
+					<option value="bin/magento info:adminuri">Admin URL</option>
+				</optgroup>
+				<optgroup label="Custom">
+					<option value="custom">Custom</option>
 				</optgroup>
 			</select>
 		</div>
 
 		<button type="submit" class="btn btn-success"><?php echo __('Run'); ?> <span class="fa fa-arrow-right"></span></button>
+		
+		
 
 	</form>
 	<!-- <div class="cloner">
@@ -66,9 +76,6 @@
 		</div>
 	</div> -->
 	<div class="console-container">
-		<div title="Close" class="close-btn sys-btn"><i class="fa fa-close"></i></div>
-		<div title="Minimize" class="minimize-btn sys-btn"><i class="fa fa-minus"></i></div>
-		<div title="Reload" id="reload-btn" class="reload-btn sys-btn"><i class="fa fa-refresh"></i></div>
 		<div class="console" >
 			<div class="result-content">
 				<div class="command-text"><span class="user">TCT</span>&nbsp;:<span class="path" id="path"></span>&nbsp;$&nbsp;&nbsp;<span class="command" id="command-display"></span></div>
@@ -82,6 +89,7 @@
 		
 </div>
 <!-- put form validaiton -->
+
 <script type="text/x-magento-init">
 {
     "#form": {
