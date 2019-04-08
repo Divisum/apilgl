@@ -1,3 +1,78 @@
+<style>
+.hidden {
+	display: none;
+}
+.console-container {
+	position: relative;
+	margin-top: 20px;
+}
+.console {
+	background: #000;
+    overflow-y: scroll;
+    /* position: relative; */
+    padding: 10px;
+}
+.command-text {
+	color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+}
+.result-content {
+	height: 300px;
+}
+.sys-btn {
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	top: 10px;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 11px;
+    cursor: pointer;
+}
+.sys-btn.close-btn {
+	background: #F44336;
+	left: 5px;
+}
+.sys-btn.minimize-btn {
+	background: #FFC107;
+	left: 25px;
+}
+.sys-btn.reload-btn {
+	background: #00cc00;
+	left: 45px;
+}
+.fa-minus {
+	margin: 3px 0 0 1px;
+}
+.user {
+	color: #00cc00;
+}
+.path {
+	color: #3F51B5;
+}
+.command {
+	font-weight: 500;
+}
+.cloner {
+	display: none;
+}
+pre {
+    color: #fff !important;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+button.btn.btn-success {
+    line-height: 18px;
+	border: 2px solid transparent;
+	margin-bottom: 10px;
+}
+</style>
 <div class="col-sm-6 col-sm-offset-3" style="margin-top: 40px;">
 
 	<!-- OUR FORM -->
