@@ -1,0 +1,157 @@
+.hidden {
+	display: none;
+}
+.console-container {
+	position: relative;
+	margin-top: 20px;
+}
+.console {
+	background: #000;
+    overflow-y: scroll;
+    /* position: relative; */
+    padding: 10px;
+}
+.command-text {
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 0.8px;
+	font-size: 12px !important;
+}
+.result-content {
+	height: 300px;
+	font-size: 12px !important;
+}
+.sys-btn {
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	top: 10px;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 11px;
+    cursor: pointer;
+}
+.sys-btn.close-btn {
+	background: #F44336;
+	left: 5px;
+}
+.sys-btn.minimize-btn {
+	background: #FFC107;
+	left: 25px;
+}
+.sys-btn.reload-btn {
+	background: #00cc00;
+	left: 45px;
+}
+.fa-minus {
+	margin: 3px 0 0 1px;
+}
+.user {
+	color: #00cc00;
+}
+.path {
+	color: #ff0000;
+	
+	/* float: left; */
+}
+.command {
+	font-weight: 500;
+}
+.cloner {
+	display: none;
+}
+pre {
+    color: #fff !important;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+button.btn.btn-success {
+    line-height: 18px;
+	border: 2px solid transparent;
+	margin-bottom: 10px;
+}
+body{
+    font-family: arial;
+    font-size: 12px;
+}
+input.form-control-lgl.input-text {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 12px;
+    border: 1px solid #ddd !important;
+    padding: 5px !important;
+    height: 30px !important;
+}
+
+form#form label,
+span.label-text {
+    font-size: 12px !important;
+    color: #aaa !important;
+    margin: 0 !important;
+}
+.base-path a {
+    width: 10%;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    float: right;
+    text-align: center;
+    border: 1px solid #000;
+    position: relative;
+    top: -1px;
+}
+.base-path a:hover {
+    color: #ff0000 !important;
+    text-decoration: none;
+    background: #000;
+}
+
+div#top {
+    display: none;
+}
+
+select#command {
+    border: 1px solid #ddd !important;
+    width: 100%;
+    height: 30px !important;
+    font-size: 12px !important;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: inline-block;
+    width: 100%;
+}
+
+.base-path .path {
+    float: left;
+    font-size: 12px;
+	display: inline-block;
+	width: 90%;
+}
+
+.loading-mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    background: rgba(0,0,0,.2);
+    z-index: 9999999999;
+}
+
+.loader {
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+.copy-wiz {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
